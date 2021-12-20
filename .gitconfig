@@ -53,6 +53,10 @@
 # Show the user email for the current repository.
   whoami = config user.email
 
+[apply]
+  # Detect whitespace errors when applying a patch.
+  whitespace = fix
+
 [user]
   name = abtreece
   email = britt.treece@gmail.com
@@ -62,3 +66,5 @@
   helper = store
 [pull]
   ff = only
+[init]
+  defaultBranch = main
