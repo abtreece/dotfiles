@@ -1,5 +1,7 @@
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
+# export GOPATH
+export GOPATH="$HOME/projects/go"
+# Add `~/bin` and `$GOPATH/bin` to the `$PATH`
+export PATH="$HOME/bin:$GOPATH/bin:$PATH";
 eval "$(/opt/homebrew/bin/brew shellenv)"
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
