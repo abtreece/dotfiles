@@ -12,3 +12,12 @@ Thumbs.db
 # Files that might appear on external disks
 .Spotlight-V100
 .Trashes
+
+# Secrets and credentials
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+secrets.yml
+.aws/credentials
