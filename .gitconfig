@@ -63,8 +63,16 @@
 [commit]
   template = ~/.gitmessage
 [credential]
-  helper = store
+  helper = osxkeychain
 [pull]
   ff = only
 [init]
   defaultBranch = main
+[rerere]
+  enabled = true
+[fetch]
+  prune = true
+[diff]
+  algorithm = histogram
+[merge]
+  conflictStyle = zdiff3
