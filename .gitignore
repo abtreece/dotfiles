@@ -16,8 +16,41 @@ Thumbs.db
 # Secrets and credentials
 .env
 .env.*
+!.env.example
+!.env.template
 *.key
 *.pem
+*.p12
+*.pfx
 credentials.json
 secrets.yml
+secrets.yaml
 .aws/credentials
+
+# Additional secret patterns
+*.secret
+*.secrets
+id_rsa*
+id_ed25519*
+id_ecdsa*
+id_dsa*
+*.pub
+token
+*_token
+*.token
+auth.json
+.netrc
+.npmrc
+.pypirc
+
+# API keys and tokens
+*apikey*
+*api_key*
+*api-key*
+
+# Database
+*.sqlite
+*.db
+
+# Log files that might contain sensitive data
+*.log
