@@ -1,0 +1,26 @@
+# fd ignore patterns (fd respects .gitignore by default)
+
+# Version control
+.git/
+
+# Dependencies
+node_modules/
+vendor/
+.venv/
+__pycache__/
+
+# Build artifacts
+dist/
+build/
+*.min.js
+*.min.css
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db

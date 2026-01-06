@@ -1,0 +1,26 @@
+# Ripgrep configuration
+
+# Smart case: case-insensitive unless pattern contains uppercase
+--smart-case
+
+# Search hidden files and directories
+--hidden
+
+# Follow symbolic links
+--follow
+
+# Don't search these directories
+--glob=!.git/*
+--glob=!node_modules/*
+--glob=!vendor/*
+--glob=!.venv/*
+--glob=!__pycache__/*
+--glob=!*.min.js
+--glob=!*.min.css
+--glob=!.DS_Store
+
+# Show line numbers
+--line-number
+
+# Sort by file path
+--sort=path

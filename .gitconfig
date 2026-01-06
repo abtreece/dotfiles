@@ -53,6 +53,30 @@
 # Show the user email for the current repository.
   whoami = config user.email
 
+  # Undo last commit but keep changes staged
+  undo = reset --soft HEAD~1
+
+  # Show what you'd be pushing
+  outgoing = log @{u}..
+
+  # Stash including untracked files
+  stash-all = stash push --include-untracked
+
+  # Better branch listing - recent branches first
+  recent = branch --sort=-committerdate --format='%(refname:short) (%(committerdate:relative))'
+
+  # Find commits by message
+  find-msg = log --all --grep
+
+  # Find commits that added/removed a string
+  find-code = log -S
+
+  # Quick fixup commit
+  fixup = commit --fixup
+
+  # Word diff for prose
+  wdiff = diff --word-diff
+
 [apply]
   # Detect whitespace errors when applying a patch.
   whitespace = fix
@@ -76,3 +100,13 @@
   algorithm = histogram
 [merge]
   conflictStyle = zdiff3
+[push]
+  # Auto-set upstream on first push
+  autoSetupRemote = true
+  default = current
+[branch]
+  # Show recently used branches first
+  sort = -committerdate
+[diff]
+  # Show moved lines in different color
+  colorMoved = default

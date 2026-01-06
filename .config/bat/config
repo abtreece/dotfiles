@@ -1,0 +1,15 @@
+# bat configuration
+
+# Use Solarized Dark theme to match terminal
+--theme="Solarized (dark)"
+
+# Show line numbers and git modifications
+--style="numbers,changes,header"
+
+# Use less as pager
+--pager="less -FR"
+
+# Enable syntax highlighting for specific file types
+--map-syntax "*.conf:INI"
+--map-syntax ".gitignore:Git Ignore"
+--map-syntax "*.envrc:Bash"

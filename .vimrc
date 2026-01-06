@@ -96,4 +96,42 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+	" Auto-reload files changed outside vim
+	autocmd FocusGained,BufEnter * checktime
 endif
+
+" Better undo persistence
+if has('persistent_undo')
+	set undofile
+	set undolevels=1000
+	set undoreload=10000
+endif
+
+" Better splits - open below and to the right
+set splitbelow
+set splitright
+
+" Show relative line numbers (useful for motions like 5j, 10k)
+set relativenumber
+set number
+
+" Faster escape key response
+set ttimeoutlen=10
+
+" Auto-reload files changed outside vim
+set autoread
+
+" Smart case for search (override ignorecase if pattern has uppercase)
+set smartcase
+
+" Natural split navigation with Ctrl+hjkl
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Quick save
+nnoremap <leader>w :w<CR>
+
+" Clear search highlighting with Escape
+nnoremap <Esc> :nohlsearch<CR><Esc>

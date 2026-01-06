@@ -1,0 +1,54 @@
+# Readline configuration for better tab completion and editing
+
+# Case-insensitive tab completion
+set completion-ignore-case on
+
+# Treat hyphens and underscores as equivalent for completion
+set completion-map-case on
+
+# Show all completions on first tab press (no second tab needed)
+set show-all-if-ambiguous on
+
+# Show all completions if there are multiple possibilities
+set show-all-if-unmodified on
+
+# Color files by type during completion (like ls)
+set colored-stats on
+
+# Add trailing slash when completing directories
+set mark-directories on
+set mark-symlinked-directories on
+
+# Show file types in completion (@ for symlinks, / for directories, etc.)
+set visible-stats on
+
+# Color the common prefix in completion
+set colored-completion-prefix on
+
+# Don't expand ~ to full home path
+set expand-tilde off
+
+# Enable 8-bit input/output (UTF-8 support)
+set input-meta on
+set output-meta on
+set convert-meta off
+
+# Wrap long lines instead of scrolling
+set horizontal-scroll-mode off
+
+# Ring the bell on ambiguous completion
+set bell-style none
+
+# Allow UTF-8 input/output
+set meta-flag on
+
+# History navigation with partial string
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# Ctrl+Left/Right to move by word
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+
+# Better word deletion
+"\e[3;5~": kill-word

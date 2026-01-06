@@ -141,3 +141,58 @@ alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# Modern CLI tool aliases (only if installed)
+# bat: better cat with syntax highlighting
+command -v bat &> /dev/null && alias cat='bat --paging=never'
+
+# eza: modern ls replacement
+if command -v eza &> /dev/null; then
+	alias ls='eza'
+	alias la='eza -la --git'
+	alias ll='eza -l --git'
+	alias lt='eza --tree --level=2'
+	alias lta='eza --tree --level=2 -a'
+fi
+
+# fd: modern find replacement
+command -v fd &> /dev/null && alias find='fd'
+
+# Quick config edit aliases
+alias ealiases='${EDITOR} ~/.aliases && source ~/.aliases'
+alias ebash='${EDITOR} ~/.bash_profile && source ~/.bash_profile'
+alias evim='${EDITOR} ~/.vimrc'
+alias egit='${EDITOR} ~/.gitconfig'
+
+# Git shortcuts (supplement the g alias)
+alias gst='git status'
+alias gco='git checkout'
+alias gcm='git commit -m'
+alias gca='git commit -am'
+alias gp='git push'
+alias gl='git pull'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gb='git branch'
+alias glog='git log --oneline --graph -10'
+
+# Docker shortcuts
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias dimg='docker images'
+alias dex='docker exec -it'
+
+# Kubernetes shortcuts (if kubectl installed)
+command -v kubectl &> /dev/null && alias k='kubectl'
+
+# Quick directory bookmarks
+alias cdc='cd ~/projects/abtreece'
+
+# Copy working directory to clipboard
+alias cpwd='pwd | tr -d "\n" | pbcopy'
+
+# Show disk usage sorted by size
+alias duf='du -sh * | sort -hr'
+
+# Weather in terminal
+alias weather='curl -s "wttr.in/?format=3"'
